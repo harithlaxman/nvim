@@ -5,7 +5,10 @@ return {
     local lsp = vim.lsp
 
     lspconfig.lua_ls.setup({})
-    lspconfig.gopls.setup({})
+    lspconfig.gopls.setup({
+      cmd = { "gopls" },
+      filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    })
 
     vim.keymap.set('n', 'gi', lsp.buf.implementation, {})
     vim.keymap.set('n', 'gd', lsp.buf.definition, {})
