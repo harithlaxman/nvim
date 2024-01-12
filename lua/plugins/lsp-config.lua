@@ -3,11 +3,17 @@ return {
   config = function()
     local lspconfig = require('lspconfig')
     local lsp = vim.lsp
+    local util = require("lspconfig.util")
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    lspconfig.lua_ls.setup({})
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities,
+    })
     lspconfig.gopls.setup({
+      capabilities = capabilities,
       cmd = { "gopls" },
       filetypes = { "go", "gomod", "gowork", "gotmpl" },
+      root_dir = util.root_pattern( "go.work", "go.mod", ".git" ),
     })
 
     vim.keymap.set('n', 'gi', lsp.buf.implementation, {})
