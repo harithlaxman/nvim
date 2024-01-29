@@ -17,9 +17,9 @@ return {
 
 
       -- Telescope selectors for lsp actions
-      vim.keymap.set("n", "gi", builtin.lsp_implementations, {})
-      vim.keymap.set("n", "gd", builtin.lsp_definitions, {})
-      vim.keymap.set("n", "gr", builtin.lsp_references, {})
+      vim.keymap.set("n", "Tgi", builtin.lsp_implementations, {})
+      vim.keymap.set("n", "Tgd", builtin.lsp_definitions, {})
+      vim.keymap.set("n", "Tgr", builtin.lsp_references, {})
     end,
   },
   {

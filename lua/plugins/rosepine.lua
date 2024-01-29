@@ -2,7 +2,7 @@ return{
   'rose-pine/neovim',
   name = 'rose-pine',
   opts = {
-    variant = "dawn",
+    variant = "moon",
     styles = {
       transparency = true,
     },

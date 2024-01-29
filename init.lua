@@ -13,6 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-configs")
 
-local opts = require("core.lazy")
+local opts = {
+  ui = {
+    border = "rounded",
+    title = "LAZY PIECE OF SHIT",
+  },
+}
+
 require("lazy").setup("plugins", opts)
 vim.keymap.set("n", "<leader>lm", "<cmd>Lazy<CR>", {})
