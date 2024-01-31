@@ -16,7 +16,7 @@ require("vim-configs")
 local opts = {
   ui = {
     border = "rounded",
-    title = "LAZY PIECE OF SHIT",
+    title = "LAZY",
   },
 }
 
