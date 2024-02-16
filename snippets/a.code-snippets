@@ -1,0 +1,34 @@
+{
+    // a comment, since `.code-snippets` may contain jsonc.
+    "c/cpp-snippet": {
+        "prefix": [
+            "cpTemplate",
+        ],
+        "body": [
+            "#include <cstdio>",
+            "#include <ios>",
+            "#include <iostream>",
+            "using namespace std;",
+            "",
+            "void solve() {}",
+            "",
+            "int main() {",
+            "   ios::sync_with_stdio(0);",
+            "   cin.tie(0);",
+            "",
+            "   freopen(\"input.txt\", \"r\", stdin);",
+            "   freopen(\"output.txt\", \"w\", stdout);",
+            "",
+            "   int t;",
+            "   cin >> t;",
+            "   while (t--) {",
+            "       solve();",
+            "   }",
+            "",
+            "   return (0);",
+            "}",
+        ],
+        "description": "A description of the snippet.",
+        "scope": "c,cpp"
+    }
+}

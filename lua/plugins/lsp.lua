@@ -1,10 +1,16 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPost" },
     config = function()
-      print("hello")
       local lspconfig = require("lspconfig")
-      lspconfig.gopls.setup({})
+      lspconfig.gopls.setup({
+        settings = {
+          gopls = {
+            gofumpt = true,
+          },
+        },
+      })
       lspconfig.lua_ls.setup({})
       lspconfig.clangd.setup({})
       lspconfig.pyright.setup({})
